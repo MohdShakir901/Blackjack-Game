@@ -52,7 +52,7 @@ function renderGame() {
     isAlive = false;
     message = "You are out of the game!";
   }
-  messageEl.textContent = massage;
+  messageEl.textContent = message;
 }
 
 function newCard() {
@@ -64,4 +64,5 @@ function newCard() {
     renderGame();
   }
 }
+
 
