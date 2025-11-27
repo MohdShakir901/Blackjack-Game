@@ -8,9 +8,9 @@ let sum = 0;
 
 let hasBlackJack = false;
 let isAlive = false;
-let massage = "";
+let message = "";
 
-let massageEl = document.getElementById("massage-el");
+let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let playerEl=document.getElementById("player-el")
@@ -26,7 +26,7 @@ function getRandomCard() {
   } else {
     return randomNum;
   }
-  return randonNum;
+  return randomNum;
 }
 
 function startGame() {
@@ -44,18 +44,18 @@ function renderGame() {
   }
   sumEl.textContent = "Sum: " + sum;
   if (sum <= 20) {
-    massage = "Do you want to draw a new card?";
+    message = "Do you want to draw a new card?";
   } else if (sum === 21) {
     hasBlackJack = true;
-    massage = "You've got Blackjack!";
+    message = "You've got Blackjack!";
   } else {
     isAlive = false;
-    massage = "You are out of the game!";
+    message = "You are out of the game!";
   }
-  massageEl.textContent = massage;
+  messageEl.textContent = massage;
 }
 
-function newCards() {
+function newCard() {
   if (isAlive===true && hasBlackJack===false) {
     console.log("Drawing a new card from the deck!");
     let card = getRandomCard();
@@ -64,3 +64,4 @@ function newCards() {
     renderGame();
   }
 }
+
